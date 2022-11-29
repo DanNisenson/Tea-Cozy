@@ -1,0 +1,182 @@
+/* Box sizing & margin rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* For 1rem = 10px */
+html {
+    font-size: 62.5%;
+}
+
+/* !! ADD TABINDEX to '#' HREFs !! | Solves cmd + F slow scrolling */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    font-size: 16px;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol element */
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* remove underline from 'a' elements */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 2.2rem;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+    filter: blur(0.03rem);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid seashell;
+}
+
+.logo {
+    height: 5rem;
+}
+
+.nav-links ul li {
+    display: inline;
+    padding-left: 1rem;
+    text-decoration: underline solid;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    width: 120rem; 
+    height: 70rem;
+    background-image: url(https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg?_gl=1*1dt5s5b*_ga*NjM4MTQxMjQ4LjE2NDc0NjI0MTY.*_ga_3LRZM6TM9L*MTY2MjE5MjQyMS4xMDMuMS4xNjYyMTk2MDkyLjU5LjAuMA..);
+    align-items: center;
+    justify-content: center;
+}
+
+.mission h2, 
+.mission h4{
+    width: 120rem;
+    background-color: black;
+    padding: 0.8rem 0;
+}
+
+.featured-tea {
+    margin-top: 7rem;
+}
+
+.featured-tea h2,
+.featured-tea h4 {
+    padding: 0.8rem 0;
+}
+
+.cards-section {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100rem;
+}
+
+.feat-cards {
+    width: 30rem;
+    margin: 1rem;
+}
+
+.locations {
+    background-image: url(https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg?_gl=1*1dt5s5b*_ga*NjM4MTQxMjQ4LjE2NDc0NjI0MTY.*_ga_3LRZM6TM9L*MTY2MjE5MjQyMS4xMDMuMS4xNjYyMTk2MDkyLjU5LjAuMA..);
+    height: 60rem;
+    width: 120rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-cards {
+    display: inline-flex;
+}
+
+.location-cards div {
+    height: 30rem;
+    width:30rem;
+    margin: 1.5rem 2rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+footer {
+    height: 30rem;
+    padding: 0 0 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.copyr {
+    align-self: start;
+}
